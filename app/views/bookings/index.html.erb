@@ -9,10 +9,11 @@
         <div class="card booking">  
           <p><strong><%= booking.chef.user.first_name %></strong> : <%= booking.chef.speciality %></p>
           <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
-          <p>Price: <strong>£<%= booking.chef.price %></strong></p>
+          <p>Price: <strong>£<%= sprintf('%.2f', (booking.chef.price * (booking.start_date..booking.end_date).count).round(2)) %></strong></p>
           <div>
             <%= link_to 'DELETE BOOKING', booking_path(booking), class: 'btn btn-sm btn-orange float-right', method: :delete, data: { confirm: '🚨 ARE YOU SURE YOU WANT TO DELETE THIS BOOKING 🚨' } %></p></div>
           </div>
       <% end %>
     <% end %>
 </div>
+
