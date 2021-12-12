@@ -1,0 +1,17 @@
+.map-background {
+  padding: 24px;
+  background-color: #F5B799;
+  opacity: 0.7;
+  border-radius: 15px;
+  margin:40px;
+  margin-right:75px;
+}
+
+#map .mapboxgl-canvas {
+  opacity: 1;
+  border-radius: 15px;
+}
+
+#map .mapboxgl-ctrl-attrib-inner a {
+  opacity: 0.01;
+}

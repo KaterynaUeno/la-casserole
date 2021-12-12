@@ -1,4 +1,4 @@
-
+<%#
 <div class=container>
   <div>
     <div class="text-center">
@@ -6,42 +6,41 @@
     </div>
 
     <div class="cards_list_index">
-      <% @chefs.each do |chef| %>
-        <%= link_to chef_path(chef) do %>
-          <div class="card" style="width: 18rem;">
-            <% if chef.photos.present? %>
-            <div class="card-img-top" style="background-image: url('<%= cl_image_path chef.photos[0].key %>')">
-              <span class="badge badge-light"><%= chef.speciality %></span>
-            </div>
-            <% end %>
-            <div class="d-flex justify-content-start w-100">
+      <%# <% @chefs.each do |chef| %>
+        <%# <%= link_to chef_path(chef) do %>
+          <%# <div class="card" style="width: 18rem;"> %>
+            <%# <% if chef.photos.present? %>
+            <%# <div class="card-img-top" style="background-image: url('<%= cl_image_path chef.photos[0].key %>
+              <%# <span class="badge badge-light"><%= chef.speciality %>
+            <%# </div> %>
+            <%# <% end %>
+            <%# <div class="d-flex justify-content-start w-100">
               <div class="d-flex justify-content-center w-100">
                 <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
-                  <h4 class="card-title m-0 pb-0"><%= chef.full_name %></h4>
-                  <p class="card-price m-0">Price</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-      <% end %>
-    </div>
-=======
-<div class=container1>
-<div class="container2">
-  <h2>Chefs' collection</h2>
-  <h4>Choose a chef of your best culinary experience</h4>
+                  <h4 class="card-title m-0 pb-0"><%= chef.full_name %>
+                  <%# <p class="card-price m-0">Price</p>
+                  </div> %>
+                <%# </div> %>
+              <%# </div> %>
+            <%# </div> %>
+          <%# <% end %>
+      <%# <% end %>
+    <%# </div> %>
+<div class=container>
+  <div class="text-center">
+    <h2>Chefs' collection</h2>
+    <h4>Choose a chef of your best culinary experience</h4>
   </div>
-  <div>
-    <%= form_tag chefs_path, method: :get, class: 'my-5 d-flex' do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a chef of your favourite taste"
-      %>
-      <%= submit_tag "Search", class: "btn btn-orange" %>
-    <% end %>
-  </div>
+  <%= form_tag chefs_path, method: :get, class: 'my-5 d-flex' do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a chef of your favourite taste"
+    %>
+    <%= submit_tag "Search", class: "btn btn-orange" %>
+  <% end %>
+</div>
+
   <div class="cards_list_index">
     <% @chefs.each do |chef| %>
       <%= link_to chef_path(chef) do %>
@@ -51,12 +50,25 @@
             <span class="badge badge-light"><%= chef.speciality %></span>
           </div>
           <% end %>
-          <div class="card-body">
-            <h4 class="card-title"><%= chef.full_name %></h4>
-            <p class="card-price"><%= chef.price %></p>
+          <div class="d-flex justify-content-start w-100">
+          <div class="d-flex justify-content-center w-100">
+          <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
+            <h4 class="card-title m-0 pb-0"><%= chef.full_name %></h4>
+            <p class="card-price m-0">£<%= chef.price %>/hour</p>
           </div>
+          </div>
+        </div>
         </div>
         <% end %>
     <% end %>
+ </div>
+
+<div class="container">
+  <div class="map-background">
+    <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>

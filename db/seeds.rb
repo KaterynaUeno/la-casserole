@@ -24,7 +24,8 @@ chef_french = Chef.create!(
   speciality: "French cuisine",
   experience: "Worked mostly as a freelance cook, and was not employed by any particular household",
   user: user1,
-  price: 102.5
+  price: 102.5,
+  address: "2a Garrick Street, London WC2E 9BH"
 )
 
 file1 = URI.open('https://res.cloudinary.com/olya-kolesova/image/upload/v1629897927/la-casserole/french0_rtqe9m.jpg')
@@ -50,7 +51,8 @@ chef_japanese = Chef.create!(
   speciality: "Japanese cuisine",
   experience: "Prepared traditional Japanese sushi rice, chopping, slicing, and filleting various kinds of fish, and placing orders for supplies as needed. Lived and worked in London last 3 years.",
   user: user2,
-  price: 98.7
+  price: 98.7,
+  address: "73 St James's Street, London SW1A 1PH"
 )
 
 file1 = URI.open('https://res.cloudinary.com/olya-kolesova/image/upload/v1629897927/la-casserole/japanese0_bctrjr.jpg')
@@ -76,7 +78,8 @@ chef_chinese = Chef.create!(
   speciality: "Chinese cuisine",
   experience: "Chef and owner of five restaurants. He is the former head chef of the three Michelin star restaurant Le Jardin des Sens in France. He is known for his Octo-philosophy of eight elements which make up his dishes. In 2017, his Michelin 2-star eponymous Restaurant André was named the Best Restaurant in Singapore, and the second-best in Asia by Restaurant magazine",
   user: user3,
-  price: 46.4
+  price: 46.4,
+  address: "10 Lincoln Street, London SW3 2TS"
 )
 
 file1 = URI.open('https://res.cloudinary.com/olya-kolesova/image/upload/v1629897927/la-casserole/chinise0_nz5lox.jpg')
@@ -102,8 +105,8 @@ chef_korean = Chef.create!(
   speciality: "Korean cuisine",
   experience: "Gained prominence as the creator of the gourmet Korean-Mexican taco truck Kogi. Choi is a chef who is celebrated for 'food that isn't fancy' and is known as one of the founders of the gourmet food truck movement. In 2019, Choi began presenting a cooking series on Netflix with Jon Favreau titled The Chef Show.",
   user: user4,
-  price: 34.78
-
+  price: 34.78,
+  address: "10 Greek Street, London W1D 4DH"
 )
 
 file1 = URI.open('https://res.cloudinary.com/olya-kolesova/image/upload/v1629897916/la-casserole/korean0_mqblqm.jpg')
@@ -129,7 +132,8 @@ chef_indian = Chef.create!(
   speciality: "Indian cuisine",
   experience: "Indian chef, restaurateur, cookbook writer, filmmaker and humanitarian. He is one of the judges of Star Plus series MasterChef India.",
   user: user5,
-  price: 25.8
+  price: 25.8,
+  address: "73 Brick Lane, London E1 6QL"
 )
 
 file1 = URI.open('https://res.cloudinary.com/olya-kolesova/image/upload/v1629897927/la-casserole/indian0_r4iztq.jpg')
@@ -156,7 +160,8 @@ chef_eastern_european = Chef.create!(
   speciality: "Eastern-european cuisine",
   experience: "Armed with the best classical training you could ask for and a repertoire of eastern European recipes most other chefs don’t dabble with makes him one of the UK’s most exciting chefs. He cooks small plates using a wood-fired oven and live fire cooking for just five people at a time, using ingredients exclusively from local farmers with plenty of homemade charcuterie, smoked fish, butter, bread, liqueurs and ferments.",
   user: user6,
-  price: 42.3
+  price: 42.3,
+  address: "29 Westferry Circus, London E14 8RR"
 )
 
 file1 = URI.open('https://res.cloudinary.com/olya-kolesova/image/upload/v1629897927/la-casserole/easteu0_i3rurv.jpg')
@@ -170,3 +175,5 @@ chef_eastern_european.photos.attach(io: file3, filename: '3.jpg', content_type: 
 chef_eastern_european.photos.attach(io: file4, filename: '4.jpg', content_type: 'image/jpg')
 
 chef_eastern_european.save!
+
+puts "Finishing seeding!"

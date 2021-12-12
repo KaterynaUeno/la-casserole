@@ -9,6 +9,10 @@
 .logo {
  height: 50px;
  width: 50px;
+ top: 50%;
+ -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
+  margin-left: 30px;
 }
 
 ul {
@@ -16,20 +20,38 @@ ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
+
+}
+
+li {
+  height: 60px;
+  top: 50%;
+  -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
 }
 
 .nav-link {
   color: black;
+  height: 60px;
+  font-size: 30px;
+  // margin-left: 80px;
 }
 
 .nav-link:hover {
   color: rgb(136, 128, 128);
+  margin-top: 2px;
 }
 
 .navbar-toggler {
   font-size: 30px;
   font-family: StelvioGrotesk;
-  padding: 0px;
+  // padding: 0px 0px 5px 0px;
+  // margin-left: 80px;
+}
+
+.navbar-toggler:hover {
+  color: rgb(136, 128, 128);
+  margin-top: 2px;
 }
 
 .nav-drop {
@@ -39,4 +61,31 @@ ul {
 
 .drop-down {
   background: #F6F6F2;
+  padding: 5px 5px 5px 5px;
+  // margin-right: 50px;
+}
+
+.mr-auto {
+  padding: 5px 5px 5px 5px;
+}
+
+.active {
+  // margin-right: 100px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+}
+
+.drop-border {
+height: 50px;
+width: 140px;
+box-shadow: 0 0 0 1pt grey;
+border: black;
+border-radius: 50px;
+border-color: red;
+padding: 5px 5px 5px 5px;
+}
+
+.drop-border:hover {
+background: #fafafa;
+margin-top: 2px;
 }

@@ -7,6 +7,14 @@ class ChefsController < ApplicationController
     else
       @chefs = Chef.all
     end
+    @markers = @chefs.geocoded.map do |chef|
+      {
+        lat: chef.latitude,
+        lng: chef.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { chef: chef }),
+        image_url: helpers.asset_url('lemon.png')
+      }
+    end
   end
 
   def show
