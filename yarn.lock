@@ -1578,10 +1578,10 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap@4.6:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
-  integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
+bootstrap@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.1.3.tgz#ba081b0c130f810fa70900acbc1c6d3c28fa8f34"
+  integrity sha512-fcQztozJ8jToQWXxVuEyXWW+dSo8AiXWKwiSSrKWsRB/Qt+Ewwza+JWoLKiTuQLaEPhdNAJ7+Dosc9DOIqNy7Q==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -2766,6 +2766,11 @@ emojis-list@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
+
+empty-dir@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/empty-dir/-/empty-dir-0.1.0.tgz#4915bd8b63773c3f458b2dc50339c908849c84f0"
+  integrity sha1-SRW9i2N3PD9Fiy3FAznJCISchPA=
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -6065,6 +6070,13 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
+
+postgresql@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/postgresql/-/postgresql-0.0.1.tgz#f07c179d937e0c54ee735a15eb2e462b1967ab70"
+  integrity sha1-8HwXnZN+DFTuc1oV6y5GKxlnq3A=
+  dependencies:
+    empty-dir "^0.1.0"
 
 prepend-http@^1.0.0:
   version "1.0.4"
